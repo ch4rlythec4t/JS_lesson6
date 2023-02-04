@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a class="link" href="#"> link text html </a>
+    <img class="photo" src="" alt="">
+    <div class="content"></div>
+    <div class="contentButton"></div>
+    <div class="counter"></div>
+
+
+    <script>
+        const link = document.querySelector('.link')
+        link.textContent = 'link text js'
+        link.href = 'https: //developer.mozila.org/ru/'
+
+        // const photo = document.querySelector('.photo')
+        // photo.src = 'https://img1.akspic.ru/previews/7/4/7/9/6/169747/169747-ikanvas-art-pechat_na_holste-poster-oblako-500x.jpg'
+        // photo.alt = "Альтернативный текст для картинки"
+
+        // const content = document.querySelector('.content')
+        // const newTextElement = document.createElement('p')
+        // newTextElement.textContent = 'Новый текстовый контент'
+        // content.appendChild(newTextElement)
+        // newTextElement.remove()
+
+        const contentButton = document.querySelector('.contentButton');
+        const counter = document.querySelector('.counter');
+        const button = document.createElement('button')
+        const textOnClick = document.createElement('textOnClick')
+
+        button.textContent = 'Кнопка'
+        contentButton.appendChild(button)
+
+        let count = 0
+        button.onclick = function() {
+            count++
+            button.textContent = `Вы нажали ${count} раз`
+            counter.textContent = `Вы нажали ${count} раз`
+
+        }
+    </script>
+</body>
+
+</html>
